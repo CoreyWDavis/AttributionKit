@@ -40,10 +40,6 @@ public struct AttributionDetailView: View {
     }
 }
 
-struct AttributionDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AttributionDetailView(model: AttributionModel(name: "My App", license: "My License"))
-        }
-    }
+#Preview {
+    AttributionDetailView(model: AttributionModel(name: "My App", license: "My License"))
 }

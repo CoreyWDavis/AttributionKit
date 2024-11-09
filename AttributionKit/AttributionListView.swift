@@ -25,10 +25,13 @@ public struct AttributionListView: View {
     }
 }
 
-struct AttributionListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AttributionListView(model: [
-            AttributionModel(name: "My App", license: "My License")
-        ])
+#Preview {
+    let models = [
+        AttributionModel(name: "Dpeendency 1", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
+        AttributionModel(name: "Dpeendency 2", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
+        AttributionModel(name: "Dpeendency 3", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+    ]
+    NavigationView {
+        AttributionListView(model: models)
     }
 }
