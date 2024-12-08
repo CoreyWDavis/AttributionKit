@@ -27,9 +27,9 @@ public struct AttributionListView: View {
 
 #Preview {
     let models = [
-        AttributionModel(name: "Dpeendency 1", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-        AttributionModel(name: "Dpeendency 2", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-        AttributionModel(name: "Dpeendency 3", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        AttributionModel(name: "Dependency 1", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
+        AttributionModel(name: "Dependency 2", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
+        AttributionModel(name: "Dependency 3", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     ]
     NavigationView {
         AttributionListView(model: models)

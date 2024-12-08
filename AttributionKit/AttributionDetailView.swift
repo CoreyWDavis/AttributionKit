@@ -41,5 +41,9 @@ public struct AttributionDetailView: View {
 }
 
 #Preview {
-    AttributionDetailView(model: AttributionModel(name: "My App", license: "My License"))
+    NavigationView {
+        let model = AttributionModel(name: "Dependency 1",
+                                     license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        AttributionDetailView(model: model)
+    }
 }
