@@ -16,12 +16,17 @@ public struct AttributionListView: View {
     }
     
     public var body: some View {
-        List {
-            ForEach(model, id: \.name) { app in
+        NavigationView {
+            List(model, id: \.name) { app in
                 NavigationLink(destination: AttributionDetailView(model: app),
                                label: { Text(app.name) })
             }
         }
+#if os(iOS)
+        .navigationViewStyle(.stack)
+#else
+        .navigationViewStyle(.automatic)
+#endif
     }
 }
 
@@ -31,7 +36,5 @@ public struct AttributionListView: View {
         AttributionModel(name: "Dependency 2", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
         AttributionModel(name: "Dependency 3", license: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     ]
-    NavigationView {
-        AttributionListView(model: models)
-    }
+    AttributionListView(model: models)
 }
